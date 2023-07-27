@@ -16,9 +16,13 @@
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldLabel="Text"
                         name="./text"/>
+                    <name
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Namelbl"
+                        name="./name"/>
                 </items>
             </column>
         </items>
     </content>
 </jcr:root>
-

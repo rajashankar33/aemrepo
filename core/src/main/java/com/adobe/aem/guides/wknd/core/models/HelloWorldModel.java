@@ -18,7 +18,6 @@ package com.adobe.aem.guides.wknd.core.models;
 import static org.apache.sling.api.resource.ResourceResolver.PROPERTY_RESOURCE_TYPE;
 
 import javax.annotation.PostConstruct;
-
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.models.annotations.Default;
@@ -46,6 +45,9 @@ public class HelloWorldModel {
 
     private String message;
 
+   @ValueMapValue
+   private String name;
+
     @PostConstruct
     protected void init() {
         PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
@@ -56,10 +58,14 @@ public class HelloWorldModel {
         message = "Hello World!\n"
             + "Resource type is: " + resourceType + "\n"
             + "Current page is:  " + currentPagePath + "\n";
+     
     }
 
     public String getMessage() {
         return message;
+    }
+    public String getName() {
+        return this.name;
     }
 
 }
